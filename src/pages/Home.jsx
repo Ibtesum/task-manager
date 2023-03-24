@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import ProjectList from "../components/Projects/ProjectList";
 import TaskList from "../components/Tasks/TaskList";
 import TeamMembers from "../components/TeamMembers/TeamMembers";
-import { useGetProjectsQuery } from "../features/projects/projectsApi";
+
 
 const Home = () => {
-  const { data, isLoading } = useGetProjectsQuery();
-  console.log(data);
+  
 
   return (
     <div className="container relative">
