@@ -1,10 +1,11 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { apiSlice } from "../features/api/apiSlice";
+import projectSlice from "../features/projects/projectSlice";
 
 export const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
-    // projects: project
+    projects: projectSlice,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
